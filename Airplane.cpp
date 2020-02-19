@@ -3,8 +3,10 @@
 //
 
 #include "Airplane.h"
-#include <iostream>
 
-//int main () {
-//    AirBus a(1);
-//}
+int main () {
+    AirBus *a;
+    a = new AirBus(5);
+    a->fly();
+    delete a;
+}

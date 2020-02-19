@@ -14,7 +14,7 @@ public:
     ~Airplane() {cout << "Default airplane destructor";}
     Airplane(int i) {number=i; cout << "Parameter Airplane constructor" << endl;}
     void fly () {
-        std::cout << "Airplane " + number << " is flying.";
+        std::cout << "Airplane " << number << " is flying." << endl;
     }
 private:
     int number;
