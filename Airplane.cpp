@@ -5,8 +5,9 @@
 #include "Airplane.h"
 
 int main () {
-    AirBus *a;
-    a = new AirBus(5);
-    a->fly();
+    auto *a = new AirBus();
+    a->fly(5000);
+    a->refuel(5000);
+    a->fly(1000);
     delete a;
 }

@@ -6,12 +6,12 @@ struct Node {
     Node *next;
 };
 
-struct Node *head = NULL;
+struct Node *head = nullptr;
 
 void add (int i) {
-    struct Node* node = new Node;
+    auto *node = new Node;
     node->value=i;
-    if (head == NULL)
+    if (head == nullptr)
         head = new Node;
     node->next=head->next;
     head->next = node;
@@ -20,7 +20,7 @@ void add (int i) {
 void remove (int i) {
     struct Node *ptr = head;
     bool found = false;
-    while (ptr->next!=NULL) {
+    while (ptr->next!=nullptr) {
         if (ptr->next->value==i) {
             found = true;
             break;
@@ -36,25 +36,25 @@ void remove (int i) {
 }
 
 bool isEmpty () {
-    return head->next == NULL;
+    return head->next == nullptr;
 }
 
 void clear () {
-    head->next=NULL;
+    head->next=nullptr;
 }
 
 void print () {
     struct Node *ptr = head->next;
-    while (ptr!=NULL) {
+    while (ptr!=nullptr) {
         cout << ptr->value << " ";
         ptr = ptr->next;
     }
     cout << endl;
 }
 
-int main() {
-    for (int i=1; i<20; i++)
-        add(i);
-    print();
-    return 0;
-}
+//int main() {
+//    for (int i=1; i<20; i++)
+//        add(i);
+//    print();
+//    return 0;
+//}
